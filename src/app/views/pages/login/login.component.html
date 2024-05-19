@@ -1,0 +1,25 @@
+<div class="h-screen bg-gradient-to-b from-[#141e30] to-[#243b55] grid grid-cols-3">
+  <div class="col-span-2 bg-cover bg-center" style="background-image: url('/assets/images/background.PNG');"></div>
+  <div class="flex items-center justify-center bg-blue-200">
+    <div class="w-96 p-10 bg-black bg-opacity-50 shadow-lg rounded-lg text-center">
+      <h2 class="mb-6 text-3xl text-white">Login</h2>
+      <form [formGroup]="loginForm" (ngSubmit)="submitLoginForm()">
+        <div class="relative mb-6 user-box">
+          <input type="email" name="email" formControlName="email" required class="w-full py-2 text-white bg-transparent border-b border-white outline-none peer">
+          <label class="absolute top-0 left-0 py-2 text-white transition-transform transform peer-focus:-translate-y-6 peer-valid:-translate-y-6 peer-focus:text-[#03e9f4] peer-valid:text-[#03e9f4]">Email</label>
+        </div>
+        <div class="relative mb-6 user-box">
+          <input type="password" name="password" formControlName="password" required class="w-full py-2 text-white bg-transparent border-b border-white outline-none peer">
+          <label class="absolute top-0 left-0 py-2 text-white transition-transform transform peer-focus:-translate-y-6 peer-valid:-translate-y-6 peer-focus:text-[#03e9f4] peer-valid:text-[#03e9f4]">Password</label>
+        </div>
+        <button type="submit" class="relative inline-block px-5 py-2 mt-10 overflow-hidden text-lg text-[#03e9f4] border-none cursor-pointer group">
+          <span class="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent to-[#03e9f4] group-hover:w-0 animate-slide-in-1"></span>
+          <span class="absolute top-0 right-0 w-0.5 h-full bg-gradient-to-b from-transparent to-[#03e9f4] group-hover:h-0 animate-slide-in-2"></span>
+          <span class="absolute bottom-0 right-0 w-full h-0.5 bg-gradient-to-l from-transparent to-[#03e9f4] group-hover:w-0 animate-slide-in-3"></span>
+          <span class="absolute bottom-0 left-0 w-0.5 h-full bg-gradient-to-t from-transparent to-[#03e9f4] group-hover:h-0 animate-slide-in-4"></span>
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<!-- candidat-list.component.html -->
+<div class="category_list_wrapper p-4 bg-white rounded-lg shadow-md">
+    <div class="title_container mb-4">
+        <h2 class="text-2xl font-bold text-gray-800">Liste des candidats</h2>
+    </div>
+    <div class="category_list">
+        <div *ngIf="candidats.length === 0" class="text-red-500">
+            <p>Aucun candidat disponible.</p>
+        </div>
+        <table *ngIf="candidats.length > 0" class="min-w-full bg-white border border-gray-200">
+            <thead>
+                <tr class="bg-blue-200 text-gray-600 uppercase text-sm leading-normal">
+                    <th class="py-3 px-6 text-left">Nom</th>
+                    <th class="py-3 px-6 text-left">Email</th>
+                    <th class="py-3 px-6 text-left">Téléphone</th>
+                    <th class="py-3 px-6 text-left">Nombre d'heures</th>
+                    <th class="py-3 px-6 text-left">CIN</th>
+                    <th class="py-3 px-6 text-left">Catégorie</th>
+                    <th class="py-3 px-6 text-left">Actions</th>
+                </tr>
+            </thead>
+            <tbody class="text-gray-600 text-sm font-light">
+                <tr *ngFor="let candidat of candidats" class="border-b border-gray-200 hover:bg-gray-100">
+                    <td class="py-3 px-6 text-left text-black font-bold">{{ candidat.name }}</td>
+                    <td class="py-3 px-6 text-left text-black font-bold">{{ candidat.email }}</td>
+                    <td class="py-3 px-6 text-left text-black font-bold">{{ candidat.tel }}</td>
+                    <td class="py-3 px-6 text-left text-black font-bold">{{ candidat.nbHeurs }}</td>
+                    <td class="py-3 px-6 text-left text-black font-bold">{{ candidat.cin }}</td>
+                    <td class="py-3 px-6 text-left text-black font-bold">{{ candidat.category?.categConduite }}</td>
+                    <td class="py-3 px-6 text-left text-black font-bold flex space-x-2">
+                        <button class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-700">Modifier</button>
+                        <button (click)="deleteCandidat(candidat.id)" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-700">Supprimer</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

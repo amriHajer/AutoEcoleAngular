@@ -1,0 +1,29 @@
+<div class="vehicule_list_wrapper p-4 bg-white rounded-lg shadow-md">
+    <div class="title_container mb-4">
+        <h2 class="text-2xl font-bold text-gray-800">Liste des véhicules</h2>
+    </div>
+    <div class="vehicule_list">
+        <div *ngIf="vehicules.length === 0" class="text-red-500">
+            <p>Aucun véhicule disponible.</p>
+        </div>
+        <table *ngIf="vehicules.length > 0" class="min-w-full bg-white border border-gray-200">
+            <thead>
+                <tr class="bg-blue-200 text-gray-600 uppercase text-sm leading-normal">
+                    <th class="py-3 px-6 text-left">Série</th>
+                    <th class="py-3 px-6 text-left">Catégorie</th>
+                    <th class="py-3 px-6 text-left">Actions</th>
+                </tr>
+            </thead>
+            <tbody class="text-gray-600 text-sm font-light">
+                <tr *ngFor="let vehicule of vehicules" class="border-b border-gray-200 hover:bg-gray-100">
+                    <td class="py-3 px-6 text-left text-black font-bold">{{ vehicule.serie }}</td>
+                    <td class="py-3 px-6 text-left text-black font-bold">{{ vehicule.category.categConduite }}</td>
+                    <td class="py-3 px-6 text-left text-black font-bold flex space-x-2">
+                        <button class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-700">Modifier</button>
+                        <button (click)="deleteVehicule(vehicule.id)" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-700">Supprimer</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+<div class="form_wrapper">
+    <div class="form_container">
+        <div class="title_container">
+            <h2>Ajouter un candidat</h2>
+        </div>
+        <div class="row clearfix">
+            <div class="">
+                <form (ngSubmit)="submitForm()" #candidatForm="ngForm">
+                    <input type="hidden" name="role" [(ngModel)]="formData.role" />
+
+                    <div class="input_field">
+                        <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                        <input type="text" name="name" [(ngModel)]="formData.name" placeholder="Nom du candidat" required />
+                    </div>
+                    <div class="input_field">
+                        <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                        <input type="email" name="email" [(ngModel)]="formData.email" placeholder="Email" required />
+                    </div>
+                    <div class="input_field">
+                        <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                        <input type="password" name="password" [(ngModel)]="formData.password" placeholder="Mot de passe" required />
+                    </div>
+                    <div class="input_field">
+                        <span><i aria-hidden="true" class="fa fa-id-card"></i></span>
+                        <input type="text" name="cin" [(ngModel)]="formData.cin" placeholder="CIN du candidat" required />
+                    </div>
+                    
+                    <div class="input_field">
+                        <span><i aria-hidden="true" class="fa fa-clock"></i></span>
+                        <input type="number" name="nbHeurs" [(ngModel)]="formData.nbHeurs" placeholder="Nombre d'heures" required />
+                    </div>
+                    
+                    <div class="input_field">
+                        <span><i aria-hidden="true" class="fa fa-phone"></i></span>
+                        <input type="tel" name="tel" [(ngModel)]="formData.tel" placeholder="Téléphone du candidat" required />
+                    </div>
+                    
+                        
+                    
+                    <div class="input_field select_option">
+                        <select name="category_id" [(ngModel)]="formData.category_id" required>
+                            <option value="" disabled selected>Choisir une catégorie</option>
+                            <option *ngFor="let category of categories" [value]="category.id">{{ category.categConduite }}</option>
+                        </select>
+                        <div class="select_arrow"></div>
+                    </div>
+                    <input class="button" type="submit" value="S'inscrire" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
