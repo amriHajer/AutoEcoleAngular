@@ -4,6 +4,12 @@ import {
   cibCcMastercard,
   cibCcPaypal,
   cibCcStripe,
+  cibCcVisa,
+  cibFacebook,
+  cibGoogle,
+  cibLinkedin,
+  cibSkype,
+  cibTwitter,
   cifBr,
   cifEs,
   cifFr,
@@ -50,6 +56,7 @@ import {
   cilJustifyCenter,
   cilLanguage,
   cilLayers,
+  cilList,
   cilListNumbered,
   cilLocationPin,
   cilLockLocked,
@@ -86,11 +93,10 @@ import {
   cilUser,
   cilUserFemale,
   cilUserFollow,
-  cilUserUnfollow,
+  cilUserUnfollow
+} from '@coreui/icons';
 
- } from '@coreui/icons';
-
-// import { signet } from './signet';
+import { signet } from './signet';
 import { logo } from './logo';
 
 export const iconSubset = {
@@ -99,6 +105,12 @@ export const iconSubset = {
   cibCcMastercard,
   cibCcPaypal,
   cibCcStripe,
+  cibCcVisa,
+  cibFacebook,
+  cibGoogle,
+  cibLinkedin,
+  cibSkype,
+  cibTwitter,
   cifBr,
   cifEs,
   cifFr,
@@ -145,6 +157,7 @@ export const iconSubset = {
   cilJustifyCenter,
   cilLanguage,
   cilLayers,
+  cilList,
   cilListNumbered,
   cilLocationPin,
   cilLockLocked,
@@ -182,18 +195,13 @@ export const iconSubset = {
   cilUserFemale,
   cilUserFollow,
   cilUserUnfollow,
-             // Ajout de l'icône car
-        // Ajout de l'icône category (hypothétique, utiliser l'icône appropriée si disponible)
   logo,
-  // signet
+  signet
 };
 
 export enum IconSubset {
-  cibCcAmex = 'cibCcAmex',
-  cibCcApplePay = 'cibCcApplePay',
-  cibCcMastercard = 'cibCcMastercard',
-  cibCcPaypal = 'cibCcPaypal',
-  cibCcStripe = 'cibCcStripe',
+
+  cibTwitter = 'cibTwitter',
   cifBr = 'cifBr',
   cifEs = 'cifEs',
   cifFr = 'cifFr',
@@ -222,7 +230,7 @@ export enum IconSubset {
   cilCloudDownload = 'cilCloudDownload',
   cilCode = 'cilCode',
   cilCommentSquare = 'cilCommentSquare',
-  cilContrast = 'cilContrast',
+  cilContrast = 'cilContrastś',
   cilCreditCard = 'cilCreditCard',
   cilCursor = 'cilCursor',
   cilDescription = 'cilDescription',
@@ -240,6 +248,7 @@ export enum IconSubset {
   cilJustifyCenter = 'cilJustifyCenter',
   cilLanguage = 'cilLanguage',
   cilLayers = 'cilLayers',
+  cilList = 'cilList',
   cilListNumbered = 'cilListNumbered',
   cilLocationPin = 'cilLocationPin',
   cilLockLocked = 'cilLockLocked',
@@ -277,9 +286,7 @@ export enum IconSubset {
   cilUserFemale = 'cilUserFemale',
   cilUserFollow = 'cilUserFollow',
   cilUserUnfollow = 'cilUserUnfollow',
-  cilCar = 'cilCar',           // Ajout de l'icône car
-  cilList = 'cilList',         // Ajout de l'icône list
-  cilCategory = 'cilCategory', // Ajout de l'icône category (hypothétique, utiliser l'icône appropriée si disponible)
   logo = 'logo',
   signet = 'signet'
 }
+

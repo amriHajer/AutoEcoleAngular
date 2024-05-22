@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Auto Ecole</title>
+  
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="bg-gray-800 p-4 fixed w-full z-10 top-0">
+    <div class="container mx-auto flex flex-wrap items-center justify-between">
+      <div class="flex items-center">
+        <button class="text-white inline-flex p-3 hover:bg-gray-700 rounded lg:hidden ml-auto hover:text-white outline-none nav-toggler" data-target="#navigation">
+          <i class="material-icons">menu</i>
+        </button>
+        <a href="#top" class="text-white text-xl font-bold">Auto Ecole</a>
+      </div>
+      <div class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto" id="navigation">
+        <div class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto">
+          <a href="#cours" class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white hover:bg-gray-700 hover:text-white">Cours</a>
+          <a href="#test" class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white hover:bg-gray-700 hover:text-white">Test</a>
+          <a href="#profile" class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white hover:bg-gray-700 hover:text-white">Profile</a>
+          <a href="#contact" class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white hover:bg-gray-700 hover:text-white" (click)="logout()">Se déconnecter</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-cover bg-center h-screen flex items-center justify-center" id="top" style="background-image: url('http://landofcoder.com/media/resized/1900x500/wysiwyg/service/bg-service-03.jpg')">
+    <div class="text-center text-white">
+      <h1 class="text-6xl font-bold mb-4">Conduite <span class="text-gray-400">Plus</span></h1>
+      <p class="text-2xl mb-8">Maîtrisez la route, conduisez votre avenir.</p>
+      <a href="#about" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Découvrez nos cours</a>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <div class="container mx-auto mt-12">
+    <hr class="my-8">
+    <!-- First Featurette -->
+    <div class="flex flex-wrap mb-8" id="about">
+      <img class="rounded-full h-64 w-64 object-cover mb-8 lg:mb-0 lg:ml-auto lg:mr-12" src="http://placehold.it/500x500" alt="About our school">
+      <div class="lg:w-2/3">
+        <h2 class="text-4xl font-semibold mb-4">À propos de notre école <span class="text-gray-500"><br>Simple, Amusant, Immédiat</span></h2>
+        <p class="text-lg mb-8">Bienvenue à ConduitePlus, votre auto-école de confiance. Chez nous, l'apprentissage de la conduite est simple, amusant et immédiat. Nos cours sont conçus pour être instructifs sans être ennuyeux, afin que vous puissiez réussir facilement. De plus, nous délivrons les certificats immédiatement à la fin des cours, vous évitant ainsi des délais d'attente. Rejoignez-nous pour une expérience de conduite enrichissante et obtenez votre permis de conduire avec confiance.</p>
+      </div>
+    </div>
+
+    <hr class="my-8">
+
+  
+    <!-- Test Section -->
+    <div id="test" class="my-12">
+      <h2 class="text-4xl font-semibold mb-4 text-center">Test</h2>
+      
+      <div class="space-y-8">
+        <!-- Question 1 -->
+        <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" data-correct="a">
+          <h3 class="text-2xl font-semibold mb-4">Question 1: Quelle est la limite de vitesse en agglomération ?</h3>
+          <ul class="space-y-2">
+            <li>
+              <label class="inline-flex items-center">
+                <input type="radio" class="form-radio" name="q1" value="a">
+                <span class="ml-2">50 km/h</span>
+              </label>
+            </li>
+            <li>
+              <label class="inline-flex items-center">
+                <input type="radio" class="form-radio" name="q1" value="b">
+                <span class="ml-2">70 km/h</span>
+              </label>
+            </li>
+            <li>
+              <label class="inline-flex items-center">
+                <input type="radio" class="form-radio" name="q1" value="c">
+                <span class="ml-2">90 km/h</span>
+              </label>
+            </li>
+          </ul>
+          <div class="text-center mt-4 result"></div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" data-correct="b">
+          <h3 class="text-2xl font-semibold mb-4">Question 2: Quelle est la distance minimale à respecter avec le véhicule qui vous précède ?</h3>
+          <ul class="space-y-2">
+            <li>
+              <label class="inline-flex items-center">
+                <input type="radio" class="form-radio" name="q2" value="a">
+                <span class="ml-2">1 seconde</span>
+              </label>
+            </li>
+            <li>
+              <label class="inline-flex items-center">
+                <input type="radio" class="form-radio" name="q2" value="b">
+                <span class="ml-2">2 secondes</span>
+              </label>
+            </li>
+            <li>
+              <label class="inline-flex items-center">
+                <input type="radio" class="form-radio" name="q2" value="c">
+                <span class="ml-2">3 secondes</span>
+              </label>
+            </li>
+          </ul>
+          <div class="text-center mt-4 result"></div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" data-correct="c">
+          <h3 class="text-2xl font-semibold mb-4">Question 3: En cas de croisement avec un autre véhicule dans une rue étroite, qui doit céder le passage ?</h3>
+          <ul class="space-y-2">
+            <li>
+              <label class="inline-flex items-center">
+                <input type="radio" class="form-radio" name="q3" value="a">
+                <span class="ml-2">Le véhicule venant de droite</span>
+              </label>
+            </li>
+            <li>
+              <label class="inline-flex items-center">
+                <input type="radio" class="form-radio" name="q3" value="b">
+                <span class="ml-2">Le véhicule venant de gauche</span>
+              </label>
+            </li>
+            <li>
+              <label class="inline-flex items-center">
+                <input type="radio" class="form-radio" name="q3" value="c">
+                <span class="ml-2">Le véhicule le plus maniable</span>
+              </label>
+            </li>
+          </ul>
+          <div class="text-center mt-4 result"></div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" data-correct="a">
+          <h3 class="text-2xl font-semibold mb-4">Question 4: Quelle est la signification d'un panneau de signalisation avec un cercle rouge et un fond blanc ?</h3>
+          <ul class="space-y-2">
+            <li>
+              <label class="inline-flex items-center">
+                <input type="radio" class="form-radio" name="q4" value="a">
+                <span class="ml-2">Interdiction</span>
+              </label>
+            </li>
+            <li>
+              <label class="inline-flex items-center">
+                <input type="radio" class="form-radio" name="q4" value="b">
+                <span class="ml-2">Obligation</span>
+              </label>
+            </li>
+            <li>
+              <label class="inline-flex items-center">
+                <input type="radio" class="form-radio" name="q4" value="c">
+                <span class="ml-2">Danger</span>
+              </label>
+            </li>
+          </ul>
+          <div class="text-center mt-4 result"></div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" data-correct="c">
+          <h3 class="text-2xl font-semibold mb-4">Question 5: Comment réagir en cas de pluie pour éviter l'aquaplaning ?</h3>
+          <ul class="space-y-2">
+            <li>
+              <label class="inline-flex items-center">
+                <input type="radio" class="form-radio" name="q5" value="a">
+                <span class="ml-2">Accélérer doucement</span>
+              </label>
+            </li>
+            <li>
+              <label class="inline-flex items-center">
+                <input type="radio" class="form-radio" name="q5" value="b">
+                <span class="ml-2">Freiner brusquement</span>
+              </label>
+            </li>
+            <li>
+              <label class="inline-flex items-center">
+                <input type="radio" class="form-radio" name="q5" value="c">
+                <span class="ml-2">Réduire la vitesse</span>
+              </label>
+            </li>
+          </ul>
+          <div class="text-center mt-4 result"></div>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <button id="show-results" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Voir les résultats</button>
+        <h3 id="total-results" class="text-2xl font-semibold mb-4 hidden">Total Correct Answers: <span id="correct-count">0</span></h3>
+      </div>
+    </div>
+
+    <hr class="my-8">
+
+    <!-- Profile Section -->
+    <div id="profile">
+      <div class="text-center">
+        <h2 class="text-4xl font-semibold mb-4">Profile</h2>
+      </div>
+      <div class="flex flex-wrap justify-center">
+        <div class="w-full max-w-lg">
+          <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 text-center">
+            <img class="rounded-full h-32 w-32 object-cover mx-auto mb-4" src="/assets/images/userr.png" alt="Profile Image">
+            <table class="table-auto w-full border-collapse border border-gray-200">
+              <tbody>
+                <tr class="border-b">
+                  <td class="px-4 py-2 font-bold text-gray-700 border-r">Nom</td>
+                  <td class="px-4 py-2 text-gray-700">{{ user?.name }}</td>
+                </tr>
+                <tr class="border-b">
+                  <td class="px-4 py-2 font-bold text-gray-700 border-r">CIN</td>
+                  <td class="px-4 py-2 text-gray-700">{{ user?.cin }}</td>
+                </tr>
+                <tr class="border-b">
+                  <td class="px-4 py-2 font-bold text-gray-700 border-r">Email</td>
+                  <td class="px-4 py-2 text-gray-700">{{ user?.email }}</td>
+                </tr>
+                <tr class="border-b">
+                  <td class="px-4 py-2 font-bold text-gray-700 border-r">Téléphone</td>
+                  <td class="px-4 py-2 text-gray-700">{{ user?.tel }}</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 font-bold text-gray-700 border-r">Nombre d'heures</td>
+                  <td class="px-4 py-2 text-gray-700">{{ user?.nbHeurs }}</td>
+                </tr>
+                <!-- Ajoutez d'autres informations du candidat selon vos besoins -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-8">
+
+  </div>
+
+  
+</body>
+
+</html>

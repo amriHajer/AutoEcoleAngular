@@ -2,10 +2,11 @@ import { Routes } from '@angular/router';
 import { DefaultLayoutComponent } from './layout';
 
 export const routes: Routes = [
+  
   {
     path: '',
-    redirectTo: 'dashboard',
-    //redirectTo: 'login',
+     //redirectTo: 'dashboard',
+     redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -32,8 +33,12 @@ export const routes: Routes = [
         loadChildren: () => import('./views/candidat/routes').then((m) => m.routes)
       },
       
-      
-      
+      /******************************** */
+      // {
+      //   path: 'accueil',
+      //   loadChildren: () => import('./views/accueil/routes').then((m) => m.routes)
+      // } ,
+      /********************************* */
       {
         path: 'pages',
         loadChildren: () => import('./views/pages/routes').then((m) => m.routes)
@@ -48,6 +53,13 @@ export const routes: Routes = [
       title: 'Login Page'
     }
   },
+/**************************** */
+ {
+    path: 'accueil',
+    loadChildren: () => import('./Accueil/routes').then((m) => m.routes) // Corrigez le chemin ici
+  } ,
+ 
+/***************************** */
   {
     path: 'register',
     loadComponent: () => import('./views/pages/register/register.component').then(m => m.RegisterComponent),
@@ -55,6 +67,9 @@ export const routes: Routes = [
       title: 'Register Page'
     }
   },
-  { path: '**', redirectTo: 'dashboard' }
-  // { path: '**', redirectTo: 'login' }
+
+  //{ path: '**', redirectTo: 'dashboard' }
+  { path: '**', redirectTo: 'login' } ,
+  
+  
 ];

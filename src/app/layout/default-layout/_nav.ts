@@ -12,7 +12,7 @@ export const navItems: INavData[] = [
   },
   {
     title: true,
-    name: 'Theme'
+    name: 'COMPONENTS'
   },
   
   
@@ -43,7 +43,7 @@ export const navItems: INavData[] = [
   {
     name: 'Véhicule',
     url: '/vehicules',
-    iconComponent: { name: 'cil-car' },
+    iconComponent: { name: 'cil-notes' },
     children: [
       {
         name: 'Ajouter un véhicules',
@@ -65,7 +65,7 @@ export const navItems: INavData[] = [
   {
     name: 'Categorie',
     url: '/categories',
-    iconComponent: { name: 'cil-notes' },
+    iconComponent: { name: 'cil-task' },
     children: [
       {
         name: 'Ajouter un categories ',
@@ -94,28 +94,28 @@ export const navItems: INavData[] = [
   
   
   
-  {
-    title: true,
-    name: 'Extras'
-  },
-  {
-    name: 'Pages',
-    url: '/login',
-    iconComponent: { name: 'cil-star' },
-    children: [
-      {
-        name: 'Login',
-        url: '/login',
-        icon: 'nav-icon-bullet'
-      },
-      {
-        name: 'Register',
-        url: '/register',
-        icon: 'nav-icon-bullet'
-      },
+  // {
+  //   title: true,
+  //   name: 'Extras'
+  // },
+  // {
+  //   name: 'Pages',
+  //   url: '/login',
+  //   iconComponent: { name: 'cil-star' },
+  //   children: [
+  //     {
+  //       name: 'Login',
+  //       url: '/login',
+  //       icon: 'nav-icon-bullet'
+  //     },
+  //     {
+  //       name: 'Register',
+  //       url: '/register',
+  //       icon: 'nav-icon-bullet'
+  //     },
       
-    ]
-  },
+  //   ]
+  // },
   {
     title: true,
     name: 'Links',
@@ -125,6 +125,15 @@ export const navItems: INavData[] = [
     name: 'Docs',
     url: 'https://coreui.io/angular/docs/5.x/',
     iconComponent: { name: 'cil-description' },
+    attributes: { target: '_blank' }
+  } ,
+
+  
+  {
+    name: 'Logout',
+    url: '/login',
+    //url: 'http://localhost:8083/auth/logout',
+    iconComponent: { name: 'cil-AccountLogout' },
     attributes: { target: '_blank' }
   }
 ];
